@@ -20,10 +20,6 @@ const sourcemaps = require("gulp-sourcemaps");
 // Builds Sass
 
 gulp.task("build:styles", function(done) {
-
-  // Delete previous css files from public/
-  del(["./main.css"]);
-
   return gulp
     .src(["./src/styles/**/*.scss"])
     .pipe(
@@ -42,6 +38,12 @@ gulp.task("build:styles", function(done) {
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./"))
     .pipe(browserSync.stream());
+  done();
+});
+
+gulp.task("clean:styles", function(done) {
+  // Delete previous css files from public/
+  del(["./main.css"]);
   done();
 });
 
@@ -101,7 +103,7 @@ gulp.task("serve:reload", function(done) {
 gulp.task("watch:styles", function() {
   gulp.watch(
     ["./src/styles/**/*.scss", "./src/styles/*.scss"],
-    gulp.parallel("build:styles")
+    gulp.series("clean:styles", "build:styles")
   );
 });
 

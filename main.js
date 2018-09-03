@@ -1,50 +1,43 @@
 "use strict";
 
-var euComStorage = function () {
-  var UIClasses = {
-    menuBtn: ".a-menu__btn"
-  };
-
+var Storage = function () {
   var UISelects = {
-    menuBtn: document.querySelector(UIClasses.menuBtn)
+    card: document.querySelector(".card"),
+    inner: document.querySelector(".inner")
   };
 
   return {
     getSelects: function getSelects() {
       return UISelects;
-    },
-    getClasses: function getClasses() {
-      return UIClasses;
     }
   };
 }();
 
-/****************************************************************
+/********************************************************************
  ************************ Global Page Control ***********************/
 
-var euCom = function (euComStorage) {
-  var UISelects = euComStorage.getSelects();
-  var UIClasses = euComStorage.getClasses();
+var Page = function (Storage) {
+  var UISelects = Storage.getSelects();
 
   // ********************************************************
-  // ********** Functions
+  // Functions
 
-  function atachEventlisteners() {
-    console.log("HEHE;");
+  function addEventListeners() {
+    UISelects.card.addEventListener("click", grow);
+  }
+
+  function grow() {
+    UISelects.inner.classList.toggle("grow");
   }
 
   return {
     initUI: function initUI() {
-      console.groupCollapsed("%c Incepem:", "color: #3DAEFF");
-      console.log("%c Gata.", "color: #79E36B");
-      console.groupEnd();
-
-      atachEventlisteners();
+      addEventListeners();
     }
   };
-}(euComStorage);
+}(Storage);
 
-/****************************************************************
- ************************ Global Page Init **********************/
+// ****************************************************************
+// Global Page Init
 
-euCom.initUI();
+Page.initUI();

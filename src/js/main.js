@@ -1,46 +1,41 @@
 "use strict";
 
-let euComStorage = (function() {
-  let UIClasses = {
-    menuBtn: ".a-menu__btn",
-  };
-
-  let UISelects = {
-    menuBtn: document.querySelector(UIClasses.menuBtn),
+let Storage = (function() {
+  const UISelects = {
+    card: document.querySelector(".card"),
+    inner: document.querySelector(".inner"),
   };
 
   return {
     getSelects: () => UISelects,
-    getClasses: () => UIClasses,
   };
 })();
 
-/****************************************************************
+/********************************************************************
  ************************ Global Page Control ***********************/
 
-let euCom = (function(euComStorage) {
-  let UISelects = euComStorage.getSelects();
-  let UIClasses = euComStorage.getClasses();
+let Page = (function(Storage) {
+  let UISelects = Storage.getSelects();
 
   // ********************************************************
-  // ********** Functions
+  // Functions
 
-  function atachEventlisteners() {
-    console.log("HEHE;");
+  function addEventListeners() {
+    UISelects.card.addEventListener("click", grow);
+  }
+
+  function grow() {
+    UISelects.inner.classList.toggle("grow");
   }
 
   return {
     initUI: function() {
-      console.groupCollapsed("%c Incepem:", "color: #3DAEFF");
-      console.log("%c Gata.", "color: #79E36B");
-      console.groupEnd();
-
-      atachEventlisteners();
+      addEventListeners();
     },
   };
-})(euComStorage);
+})(Storage);
 
-/****************************************************************
- ************************ Global Page Init **********************/
+// ****************************************************************
+// Global Page Init
 
-euCom.initUI();
+Page.initUI();
