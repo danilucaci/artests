@@ -9,43 +9,7 @@ const gulp = require("gulp");
 const del = require("del");
 const browserSync = require("browser-sync");
 const babel = require("gulp-babel");
-const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
 const sourcemaps = require("gulp-sourcemaps");
-
-// -------------------------------------------------------------------------------
-// CSS Stuff
-// -------------------------------------------------------------------------------
-
-// Builds Sass
-
-gulp.task("build:styles", function(done) {
-  return gulp
-    .src(["./src/styles/**/*.scss"])
-    .pipe(
-      sass({
-        outputStyle: "expanded",
-      })
-    )
-    .pipe(sourcemaps.init())
-    .pipe(
-      autoprefixer({
-        cascade: false,
-        grid: false,
-        flexbox: "no-2009",
-      })
-    )
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./"))
-    .pipe(browserSync.stream());
-  done();
-});
-
-gulp.task("clean:styles", function(done) {
-  // Delete previous css files from public/
-  del(["./main.css"]);
-  done();
-});
 
 // -------------------------------------------------------------------------------
 // JS Stuff
@@ -54,7 +18,7 @@ gulp.task("clean:styles", function(done) {
 // JS copy and minify
 gulp.task("build:js", function(done) {
   return gulp
-    .src("./src/js/main.js")
+    .src("./js/main.js")
     .pipe(
       babel({
         presets: [["es2015"]],
@@ -99,33 +63,23 @@ gulp.task("serve:reload", function(done) {
 // Watching
 // -------------------------------------------------------------------------------
 
-// Watching for individual files types
-gulp.task("watch:styles", function() {
-  gulp.watch(
-    ["./src/styles/**/*.scss", "./src/styles/*.scss"],
-    gulp.series("clean:styles", "build:styles")
-  );
-});
-
 gulp.task("watch:js", function() {
-  gulp.watch("./src/js/main.js", gulp.series("build:js", "serve:reload"));
+  gulp.watch("./js/main.js", gulp.series("build:js", "serve:reload"));
 });
 
 // Dev Watch task
-gulp.task("watch", gulp.parallel("watch:js", "watch:styles"));
+gulp.task("watch", gulp.parallel("watch:js"));
 
 // -------------------------------------------------------------------------------
 // Build assets (css, js, images, fonts)
 // -------------------------------------------------------------------------------
 
-gulp.task("build:assets", gulp.parallel("build:js", "build:styles"));
+gulp.task("build:assets", gulp.parallel("build:js"));
 
 // -------------------------------------------------------------------------------
 // npm script controlled tasks
 //
-// build:prod doesn't run serve and watch tasks
 // build:dev runs serve and watch tasks
-// build:dev:preview runs serve and watch tasks with --buildDrafts --buildFuture
 // -------------------------------------------------------------------------------
 
 gulp.task(

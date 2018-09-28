@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cursor</title>
+    <meta name="description" content="A-Frame Cursor">
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.0.0/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+    <a-scene environment="preset: yavapai">
+      <a-assets>
+        <img id="boxTexture" src="oxid.png">
+      </a-assets>     
+      <a-box position="3 3 -10" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+        <a-animation attribute="scale" direction="alternate" dur="1000" repeat="indefinite" to="2.2 2.2 2.2"></a-animation>
+        <a-animation attribute="rotation" begin="mouseenter" dur="300" to="360 45 45"></a-animation>
+      </a-box>
+      <a-text value="Welcome!" color="#ff0000" position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>    
+      <a-camera>
+        <a-cursor color="#66ffff"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
