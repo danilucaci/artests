@@ -77,6 +77,37 @@ gulp.task("watch", gulp.parallel("watch:js"));
 gulp.task("build:assets", gulp.parallel("build:js"));
 
 // -------------------------------------------------------------------------------
+// Move assets to public (css, js, images, fonts)
+// -------------------------------------------------------------------------------
+
+gulp.task("move:js", function(done) {
+  return gulp
+    .src("./js/main.js")
+    .pipe(
+      babel({
+        presets: [["es2015"]],
+      })
+    )
+    .pipe(gulp.dest("./public/js"));
+  done();
+});
+
+gulp.task("move:index", function(done) {
+  return gulp.src("./index.html").pipe(gulp.dest("./public/"));
+  done();
+});
+
+gulp.task("move:recursos", function(done) {
+  return gulp.src("./recursos/**/**").pipe(gulp.dest("./public/recursos/"));
+  done();
+});
+
+gulp.task(
+  "move:assets",
+  gulp.parallel("move:js", "move:index", "move:recursos")
+);
+
+// -------------------------------------------------------------------------------
 // npm script controlled tasks
 //
 // build:dev runs serve and watch tasks
@@ -89,3 +120,5 @@ gulp.task(
     gulp.parallel("serve", "watch") // run serve and watch in parallel so i can get browser injection
   )
 );
+
+gulp.task("build:prod", gulp.series("build:assets", "move:assets"));
