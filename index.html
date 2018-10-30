@@ -15,8 +15,11 @@
   <!-- default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris. -->
   <!-- https://github.com/feiss/aframe-environment-component#parameters -->
   <a-scene foo embedded arjs>
+    <a-assets>
+      <a-asset-item id="head" src="recursos/adamHead/adamHead.gltf"></a-asset-item>
+    </a-assets>
     <a-marker preset="hiro">
-      <a-box position='0 0.5 0' material='color: cyan; opacity: 0.5'></a-box>
+      <a-entity gltf-model="#head" scale="0.2 0.2 0.2"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
