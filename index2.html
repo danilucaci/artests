@@ -1,0 +1,38 @@
+<HEAD>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
+  <script src="./recursos/js/aframe-portal-door.js"> </script>
+  <script src="./recursos/js/threex-portal-door.js"> </script>
+  <script>
+    AFRAME.registerComponent("foo", {
+      init: function () {
+        console.log('%c Proba', 'color: #00fff6');
+      },
+    });
+  </script>
+</HEAD>
+
+<body>
+  <!-- default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris. -->
+  <!-- https://github.com/feiss/aframe-environment-component#parameters -->
+  <a-scene foo embedded arjs>
+    <a-assets>
+      <a-asset-item id="duck" src="recursos/duck/duck.gltf"></a-asset-item>
+    </a-assets>
+    <!-- <a-marker preset="hiro"> -->
+    <a-anchor hit-testing-enabled='true'>
+
+      <!-- <a-entity gltf-model="#duck" scale="0.4 0.4 0.4"></a-entity> -->
+      <a-portal-door url='./recursos/360city.jpg' position='0 0 1' scale='1 1 1' rotation='0 0 0'>
+        <a-animation attribute="rotation" to="0 60 0" dur="10000" easing="linear" repeat="indefinite"></a-animation>
+      </a-portal-door>
+    </a-anchor>
+    <!-- </a-marker> -->
+
+    <!-- <a-entity camera></a-entity> -->
+    <a-camera-static />
+  </a-scene>
+</body>
+
+</html>
