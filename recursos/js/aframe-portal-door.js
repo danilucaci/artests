@@ -15,7 +15,7 @@ AFRAME.registerComponent("arjs-portal-door", {
     doorHeight: {
       // height of the door
       type: "number",
-      default: 1,
+      default: 2,
     },
   },
   init: function() {
