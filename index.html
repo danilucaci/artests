@@ -2,6 +2,7 @@
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
   <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"> </script>
   <script>
     AFRAME.registerComponent("foo", {
       init: function () {
@@ -14,16 +15,16 @@
 <body>
   <a-scene foo embedded arjs>
     <a-assets>
-      <a-asset-item id="duck" src="./recursos/duck/duck.gltf"></a-asset-item>
+      <a-asset-item id="knife_of_many" src="/recursos/knife_of_many/scene.gltf"></a-asset-item>
     </a-assets>
 
-    <a-marker type='pattern' url='./recursos/media/pattern-marker.patt'>
+    <a-marker type='pattern' url='/recursos/media/pattern-marker.patt'>
       <a-box position='0 0.5 0' scale="0.6 0.6 0.6" rotation="0 0 0" material='color: cyan;' />
       <a-animation attribute="rotation" dur="1000" to="0 180 0" repeat="indefinite"></a-animation>
     </a-marker>
 
     <a-marker preset='hiro'>
-      <a-gltf-model src="#duck" scale="0.6 0.6 0.6" rotation="0 0 0"></a-gltf-model>
+      <a-gltf-model src="#knife_of_many" scale="0.06 0.06 0.06" rotation="0 45 0" animation-mixer></a-gltf-model>
     </a-marker>
 
     <a-entity camera></a-entity>
