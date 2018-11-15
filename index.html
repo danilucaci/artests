@@ -2,8 +2,6 @@
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
   <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
-  <script src="./recursos/js/aframe-portal-door.js"> </script>
-  <script src="./recursos/js/threex-portal-door.js"> </script>
   <script>
     AFRAME.registerComponent("foo", {
       init: function () {
@@ -18,11 +16,16 @@
     <a-assets>
       <a-asset-item id="duck" src="./recursos/duck/duck.gltf"></a-asset-item>
     </a-assets>
-    <a-anchor hit-testing-enabled='true'>
-      <a-portal-door url='./recursos/media/360city.jpg' position='0 0.5 0.5' scale='2 2 2' rotation='0 0 0'>
-      </a-portal-door>
-    </a-anchor>
-    <a-camera-static />
+
+    <a-marker type='pattern' url='./recursos/media/pattern-marker.patt'>
+      <a-box position='0 0.5 0' scale="0.6 0.6 0.6" rotation="0 0 0" material='color: cyan;' />
+      <a-animation attribute="rotation" dur="1000" to="0 180 0" repeat="indefinite"></a-animation>
+    </a-marker>
+    <a-marker preset='hiro'>
+      <a-entity gltf-model="#duck" scale="0.6 0.6 0.6"></a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
   </a-scene>
 </body>
 
