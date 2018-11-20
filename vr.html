@@ -1,6 +1,8 @@
 <HEAD>
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"> </script>
   <script>
     AFRAME.registerComponent("foo", {
       init: function () {
@@ -11,12 +13,16 @@
 </HEAD>
 
 <body>
-  <a-scene foo>
+  <a-scene foo embedded arjs>
     <a-assets>
       <img id="burger" src="/recursos/burger.jpeg" />
     </a-assets>
 
-    <a-plane src="#burger" height="9" width="16" rotation="-40 0 0" position="0 0 -10"></a-plane>
+    <a-marker preset='hiro'>
+      <a-plane src="#burger" height="9" width="16" rotation="-40 0 0" position="0 0 -10"></a-plane>
+    </a-marker>
+
+    <a-entity camera></a-entity>
   </a-scene>
 </body>
 
