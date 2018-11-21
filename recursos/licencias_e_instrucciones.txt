@@ -1,0 +1,24 @@
+Para poder ver los modelos en AR hay que escanear el codigo QR
+que abrira el enlace en una web hospedada por mi donde esta publicados
+
+https://lucaci-m-d-practica-rv.netlify.com/recursos/burgers/burger_1/burger_1.html
+https://lucaci-m-d-practica-rv.netlify.com/recursos/burgers/burger_2/burger_2.html
+https://lucaci-m-d-practica-rv.netlify.com/recursos/burgers/burger_3/burger_3.html
+
+La practica esta pensada para escanear con el telefono movil el codigo QR
+y despues tener los codigos Hiro impresos en papel o puestos en una superficie plana.
+
+Licencias de las imagenes usadas
+.
+https://www.flickr.com/photos/jamescastle/31489093014/in/photolist-dpnggf-5KPRsL-atLUMx-9ia17g-9G4ztJ-5kYZ5q-9wuai4-axGJsq-8v38M9-dwt32n-SfyR3r-cExx1S-8AYQgn-bPsoxF-a22szE-fGbEVQ-25qh1PY-67N7ZJ-agomSi-23FY2Lk-5jAHkx-5mXbtZ-bPzZVM-58GPoV-fGYkbD-6URsfK-bBsoE1-6GRQG-88FVBX-6ZzPxK-FzMAr-6oVKH6-bYAUq-ags9fD-6jVz18-VA5aFu-PYzQhN-6w43rP-Poi9mZ-DTMz1V-22t62db-EqYgcV-C3mPFB-LrqDz7-J3Ev2-PJS2Us-y683NV-xqDmWs-bBsmob-6inX3
+jeremy Seto
+by nc sa 2.0
+
+https://unsplash.com/photos/fvN2OHH1dqk
+Jannis Brandt
+
+https://unsplash.com/photos/pLKgCsBOiw4
+Eaters Collective
+
+https://unsplash.com/photos/dDTbVXkBvKs
+Ella Olsson
