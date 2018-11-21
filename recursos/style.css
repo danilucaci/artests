@@ -6,11 +6,16 @@ body {
 
 h1,
 h2 {
-  margin: 16px 0;
+  margin-bottom: 16px;
 }
 
-.restaurante {
-  padding: 24px;
+.link__marker {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.restaurante__info {
+  display: block;
 }
 
 .ver-ar {
@@ -18,58 +23,15 @@ h2 {
   flex-direction: column;
 }
 
-.enlace-360 {
-  flex: 1 1 70%;
-}
-
-.link__marker {
-  flex: 1 1 30%;
-  max-width: 196px;
-  max-height: 196px;
-  object-fit: contain;
-}
 
 * {
   margin: 0;
   padding: 0;
-
-
-  outline: 1px solid;
-
-
 }
 
 .cards {
   width: 100%;
   display: block;
-}
-
-@media screen and (min-width: 37em) {
-
-  .ver-ar {
-
-    flex-direction: row;
-  }
-
-  .restaurante {
-    width: 40%;
-    margin: 0 auto;
-  }
-
-  .cards {
-    margin-top: 32px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .card {
-    flex-direction: row;
-  }
-
-  .card__marker {
-    max-width: 164px;
-    align-self: flex-start;
-  }
 }
 
 .card {
@@ -78,11 +40,6 @@ h2 {
   padding: 24px;
   margin: 24px 0;
   background-color: #fff;
-}
-
-.card__info {
-  margin-right: 16px;
-  flex: 1 0 70%;
 }
 
 .card__price {
@@ -97,7 +54,67 @@ h2 {
 }
 
 .card__marker {
+  margin-top: 24px;
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+@media screen and (min-width: 36em) {
+  .link__marker {
+    flex: 1 1 30%;
+    max-width: 196px;
+    max-height: 196px;
+    object-fit: contain;
+    margin-top: 0;
+  }
+
+  .ver-ar {
+    flex-direction: row;
+  }
+
+  .enlace-360 {
+    flex: 1 1 70%;
+  }
+
+  .restaurante__info {
+    margin-right: 16px;
+    flex: 1 1 70%;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .restaurante {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    margin-top: 32px;
+
+  }
+
+
+  .card__info {
+    margin-right: 16px;
+    flex: 1 0 70%;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .card__marker {
+    max-width: 164px;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .restaurante {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
