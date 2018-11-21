@@ -1,0 +1,111 @@
+body {
+  padding: 24px 16px;
+  background-color: hsl(0, 0%, 96%);
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  margin: 16px 0;
+}
+
+.restaurante {
+  padding: 24px;
+}
+
+.ver-ar {
+  display: flex;
+}
+
+.enlace-360 {
+  flex: 1 1 70%;
+}
+
+.link__marker {
+  flex: 1 1 30%;
+  max-width: 128px;
+  max-height: 128px;
+  object-fit: contain;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cards {
+  width: 100%;
+}
+
+@media screen and (min-width: 37em) {
+  .restaurante {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+
+  .cards {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.card {
+  padding: 24px;
+  margin: 24px 0;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 37em) {
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__contents {
+    margin-top: 24px;
+    display: flex;
+  }
+
+  .card__marker {
+    flex: 1 1 30%;
+    width: 64px;
+    height: auto;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+}
+
+.card__info {
+  flex: 1 0 70%;
+  margin-right: 16px;
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.card__marker {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  align-self: flex-start;
+}
+
+.card__img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.card__link {
+  display: block;
+  padding: 16px 0;
+}
+
+a:hover {
+  background-color: hsl(0, 0%, 96%);
+  cursor: pointer;
+}

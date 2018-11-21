@@ -1,36 +1,54 @@
-<HEAD>
-  <style>
-    .item {
-      z-index: 1000;
-      position: fixed;
-      padding: 40px;
-      font-size: 40px;
-      left: 20;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-    .item-1 {
-      top: 40px;
-      background-color: red;
-    }
-
-    .item-2 {
-      top: 80px;
-      background-color: blue;
-
-    }
-
-    .item-3 {
-      top: 120px;
-      background-color: green;
-
-    }
-  </style>
-</HEAD>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="recursos/style.css">
+  <title>Practica Realidad Virtual || Marian Daniel Lucaci</title>
+</head>
 
 <body>
-  <a href="/recursos/burger1.html" class="item item-1"></a>
-  <a href="/recursos/burger2.html" class="item item-2"></a>
-  <a href="/recursos/burger3.html" class="item item-3"></a>
+  <div class="restaurante">
+    <h1>Nuestro restaurante</h1>
+    <div class="ver-ar">
+      <a href="recursos/360/rest360.html" class="enlace-360">Ver nuestro restaurante en 360 grados</a>
+      <img src="recursos/markers/link-marker.png" class="link__marker" />
+    </div>
+    <div class="cards">
+      <div class="card">
+        <img src="recursos/burgers/burger1.jpg" class="card__img" />
+        <div class="card__contents">
+          <div class="card__info">
+            <h4 class="card__title">Hamburguesa especial</h4>
+            <p class="card__copy">Hamburguesa especial</p>
+          </div>
+          <img src="recursos/markers/burger_marker_1.png" class="card__marker" />
+        </div>
+      </div>
+      <div class="card">
+        <img src="recursos/burgers/burger2.jpg" class="card__img" />
+        <div class="card__contents">
+          <div class="card__info">
+            <h4 class="card__title">Hamburguesa especial</h4>
+            <p class="card__copy">Hamburguesa especial</p>
+          </div>
+          <img src="recursos/markers/burger_marker_2.png" class="card__marker" />
+        </div>
+      </div>
+      <div class="card">
+        <img src="recursos/burgers/burger3.jpg" class="card__img" />
+        <div class="card__contents">
+          <div class="card__info">
+            <h4 class="card__title">Hamburguesa especial</h4>
+            <p class="card__copy">Hamburguesa especial</p>
+          </div>
+          <img src="recursos/markers/burger_marker_3.png" class="card__marker" />
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

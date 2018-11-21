@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practica Realidad Virtual || Marian Daniel Lucaci</title>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-assets>
+      <img id="imagen" src="img.jpg" />
+    </a-assets>
+    <a-sky id="sky" radius="10" src="#imagen"></a-sky>
+    <a-camera>
+      <a-cursor color="#ffffff" scale="0.6 0.6 0.6"></a-cursor>
+    </a-camera>
+    <a-link href="../index.html" title="Inicio" titleColor="blue" backgroundColor='blue' highlighted='true'
+      highlightedColor="blue" position="2 2 -4">
+    </a-link>
+  </a-scene>
+</body>
+
+</html>
