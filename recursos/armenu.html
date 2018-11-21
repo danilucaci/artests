@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-width=" 6" height="9" UA-Compatible" content="ie=edge">
   <title>Practica Realidad Virtual || Marian Daniel Lucaci</title>
   <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
@@ -23,24 +22,24 @@
 <body>
   <a-scene foo embedded arjs>
     <a-assets>
-      <a-asset-item id="burger1" src="burgers/burger1.jpg"></a-asset-item>
-      <a-asset-item id="burger2" src="burgers/burger2.jpg"></a-asset-item>
-      <a-asset-item id="burger3" src="burgers/burger3.jpg"></a-asset-item>
+      <img id="burger1" src="burgers/burger1.jpg" />
+      <img id="burger2" src="burgers/burger2.jpg" />
+      <img id="burger3" src="burgers/burger3.jpg" />
     </a-assets>
 
-    <a-marker type='pattern' url='markers/burger_daniel_marker_1.patt'>
-      <a-plane src="#burger1" position='0 0.5 0' scale="0.6 0.6 0.6" rotation="0 0 0" />
-      <a-animation attribute="rotation" dur="1000" to="0 180 0" repeat="indefinite"></a-animation>
+    <a-marker type='pattern' url='markers/burger_marker_1.patt'>
+      <a-plane src="#burger1" position='0 0.5 0' width="6" height="9" rotation="-90 0 0" />
+      <a-animation attribute="rotation" dur="20000" to="-90 360 0" repeat="indefinite"></a-animation>
     </a-marker>
 
     <a-marker type='pattern' url='markers/burger_marker_2.patt'>
-      <a-plane src="#burger2" position='0 0.5 0' scale="0.6 0.6 0.6" rotation="0 0 0" />
-      <a-animation attribute="rotation" dur="1000" to="0 180 0" repeat="indefinite"></a-animation>
+      <a-plane src="#burger2" position='0 0.5 0' width="6" height="9" rotation="-90 0 0" />
+      <a-animation attribute="rotation" dur="20000" to="-90 360 0" repeat="indefinite"></a-animation>
     </a-marker>
 
     <a-marker type='pattern' url='markers/burger_marker_3.patt'>
-      <a-plane src="#burger3" position='0 0.5 0' scale="0.6 0.6 0.6" rotation="0 0 0" />
-      <a-animation attribute="rotation" dur="1000" to="0 180 0" repeat="indefinite"></a-animation>
+      <a-plane src="#burger3" position='0 0.5 0' width="6" height="9" rotation="-90 0 0" />
+      <a-animation attribute="rotation" dur="20000" to="-90 360 0" repeat="indefinite"></a-animation>
     </a-marker>
 
     <a-entity camera></a-entity>
