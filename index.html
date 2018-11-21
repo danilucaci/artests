@@ -1,35 +1,28 @@
 <HEAD>
-  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-  <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
-  <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
-  <script src="https://rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"> </script>
-  <script>
-    AFRAME.registerComponent("js", {
-      init: function () {
-
-      },
-    });
-  </script>
   <style>
     .item {
       z-index: 1000;
-      background-color: hsla(0, 0, 100, 0.8);
       position: fixed;
       padding: 40px;
       font-size: 40px;
       left: 20;
     }
 
-    .item1 {
+    .item-1 {
       top: 40px;
+      background-color: red;
     }
 
-    .item2 {
+    .item-2 {
       top: 80px;
+      background-color: blue;
+
     }
 
-    .item3 {
+    .item-3 {
       top: 120px;
+      background-color: green;
+
     }
   </style>
 </HEAD>
@@ -38,15 +31,6 @@
   <a href="/burger1.html" class="item item-1"></a>
   <a href="/burger2.html" class="item item-2"></a>
   <a href="/burger3.html" class="item item-3"></a>
-  <a-scene js embedded arjs>
-    <a-assets>
-      <img id="burger1" src="/recursos/burger1.jpg" />
-      <img id="burger2" src="/recursos/burger2.jpg" />
-      <img id="burger3" src="/recursos/burger3.jpg" />
-    </a-assets>
-
-    <a-entity camera> </a-entity>
-  </a-scene>
 </body>
 
 </html>
