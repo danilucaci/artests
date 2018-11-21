@@ -73,6 +73,10 @@ h2 {
     flex-direction: row;
   }
 
+  .card {
+    margin: 156px 0;
+  }
+
   .enlace-360 {
     flex: 1 1 70%;
   }
@@ -92,7 +96,6 @@ h2 {
 
   .cards {
     margin-top: 32px;
-
   }
 
 
