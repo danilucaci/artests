@@ -4,36 +4,48 @@
   <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
   <script src="https://rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"> </script>
   <script>
-    AFRAME.registerComponent("foo", {
+    AFRAME.registerComponent("js", {
       init: function () {
-        console.log('%c Proba', 'color: #00fff6');
+
       },
     });
   </script>
   <style>
-    .ar {
+    .item {
       z-index: 1000;
-      background-color: #fff;
+      background-color: hsla(0, 0, 100, 0.8);
       position: fixed;
       padding: 40px;
       font-size: 40px;
-      top: 100px;
-      left: 100px;
+      left: 20;
+    }
+
+    .item1 {
+      top: 40px;
+    }
+
+    .item2 {
+      top: 80px;
+    }
+
+    .item3 {
+      top: 120px;
     }
   </style>
 </HEAD>
 
 <body>
-  <a-scene foo embedded arjs>
+  <a href="/burger1.html" class="item item-1"></a>
+  <a href="/burger2.html" class="item item-2"></a>
+  <a href="/burger3.html" class="item item-3"></a>
+  <a-scene js embedded arjs>
     <a-assets>
-      <img id="burger" src="/recursos/burger.jpeg" />
+      <img id="burger1" src="/recursos/burger1.jpg" />
+      <img id="burger2" src="/recursos/burger2.jpg" />
+      <img id="burger3" src="/recursos/burger3.jpg" />
     </a-assets>
 
-    <a-marker preset='hiro'>
-      <a-plane src="#burger" height="12" width="16" rotation="-90 0 0" position="0 -10 -10"></a-plane>
-    </a-marker>
-
-    <a-entity camera></a-entity>
+    <a-entity camera> </a-entity>
   </a-scene>
 </body>
 
