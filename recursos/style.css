@@ -51,6 +51,28 @@ h2 {
   display: block;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__info {
+  flex: 1 0 60%;
+}
+
+.qr__link {
+  display: block;
+  max-width: 260px;
+  object-fit: contain;
+  flex: 1 0 40%;
+}
+
+@media screen and (min-width: 40em) {
+  .header {
+    flex-direction: row;
+  }
+}
+
 @media screen and (min-width: 48em) {
   .cards {
     margin-top: 32px;
