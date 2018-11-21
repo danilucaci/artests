@@ -9,21 +9,6 @@ h2 {
   margin-bottom: 16px;
 }
 
-.link__marker {
-  margin-top: 24px;
-  width: 100%;
-}
-
-.restaurante__info {
-  display: block;
-}
-
-.ver-ar {
-  display: flex;
-  flex-direction: column;
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -53,65 +38,25 @@ h2 {
   margin-bottom: 16px;
 }
 
-.card__marker {
+.card__link {
   margin-top: 24px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
 }
 
-@media screen and (min-width: 36em) {
-  .link__marker {
-    flex: 1 1 30%;
-    max-width: 196px;
-    max-height: 196px;
-    object-fit: contain;
-    margin-top: 0;
-  }
+.burger__marker {
+  max-width: 500px;
+}
 
-  .ver-ar {
-    flex-direction: row;
-  }
-
-  .card {
-    margin: 156px 0;
-  }
-
-  .enlace-360 {
-    flex: 1 1 70%;
-  }
-
-  .restaurante__info {
-    margin-right: 16px;
-    flex: 1 1 70%;
-  }
+.burger__link {
+  margin: 24px 0;
+  display: block;
 }
 
 @media screen and (min-width: 48em) {
-  .restaurante {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .cards {
     margin-top: 32px;
   }
 
-
-  .card__info {
-    margin-right: 16px;
-    flex: 1 0 70%;
-  }
-
-  .card {
-    flex-direction: row;
-  }
-
-  .card__marker {
-    max-width: 164px;
-    align-self: flex-start;
-  }
 }
 
 @media screen and (min-width: 64em) {

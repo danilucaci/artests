@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-width=" 6" height="9" UA-Compatible" content="ie=edge">
+  <title>Practica Realidad Virtual || Marian Daniel Lucaci</title>
+  <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+  <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+  <script src="https://rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"> </script>
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v4.2.0/dist/aframe-extras.min.js"> </script>
+</head>
+
+<body>
+  <a-scene embedded arjs>
+    <a-assets>
+      <img id="burger_1" src"/burger_1.jpg" />
+    </a-assets>
+
+    <a-marker preset='hiro'>
+      <a-plane src="#burger_1" position='0 0 0' width="6" height="9" rotation="-90 0 0" />
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+
+</html>
