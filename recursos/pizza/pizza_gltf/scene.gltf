@@ -1,6 +1,5 @@
 {
-  "accessors": [
-    {
+  "accessors": [{
       "bufferView": 2,
       "componentType": 5126,
       "count": 21524,
@@ -331,8 +330,7 @@
     "generator": "Sketchfab-3.20.7",
     "version": "2.0"
   },
-  "bufferViews": [
-    {
+  "bufferViews": [{
       "buffer": 0,
       "byteLength": 795012,
       "byteOffset": 0,
@@ -364,18 +362,15 @@
       "target": 34962
     }
   ],
-  "buffers": [
-    {
-      "byteLength": 2634420,
-      "uri": "scene.bin"
-    }
-  ],
-  "images": [
-    {
+  "buffers": [{
+    "byteLength": 2634420,
+    "uri": "scene.bin"
+  }],
+  "images": [{
       "uri": "textures/Home_pizza_baseColor.jpeg"
     },
     {
-      "uri": "textures/Home_pizza_metallicRoughness.png"
+      "uri": "textures/Home_pizza_metallicRoughness.jpg"
     },
     {
       "uri": "textures/Material.001_Home_pizza.jpg_baseColor.jpeg"
@@ -387,8 +382,7 @@
       "uri": "textures/Material.001_Home_pizza.jpg.002_baseColor.jpeg"
     }
   ],
-  "materials": [
-    {
+  "materials": [{
       "doubleSided": true,
       "name": "Home_pizza",
       "pbrMetallicRoughness": {
@@ -480,70 +474,60 @@
       }
     }
   ],
-  "meshes": [
-    {
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 1,
-            "POSITION": 0,
-            "TANGENT": 2,
-            "TEXCOORD_0": 3
-          },
-          "indices": 4,
-          "material": 0,
-          "mode": 4
-        }
-      ]
+  "meshes": [{
+      "primitives": [{
+        "attributes": {
+          "NORMAL": 1,
+          "POSITION": 0,
+          "TANGENT": 2,
+          "TEXCOORD_0": 3
+        },
+        "indices": 4,
+        "material": 0,
+        "mode": 4
+      }]
     },
     {
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 6,
-            "POSITION": 5,
-            "TANGENT": 7,
-            "TEXCOORD_0": 8
-          },
-          "indices": 9,
-          "material": 1,
-          "mode": 4
-        }
-      ]
+      "primitives": [{
+        "attributes": {
+          "NORMAL": 6,
+          "POSITION": 5,
+          "TANGENT": 7,
+          "TEXCOORD_0": 8
+        },
+        "indices": 9,
+        "material": 1,
+        "mode": 4
+      }]
     },
     {
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 11,
-            "POSITION": 10,
-            "TANGENT": 12,
-            "TEXCOORD_0": 13
-          },
-          "indices": 14,
-          "material": 2,
-          "mode": 4
-        }
-      ]
+      "primitives": [{
+        "attributes": {
+          "NORMAL": 11,
+          "POSITION": 10,
+          "TANGENT": 12,
+          "TEXCOORD_0": 13
+        },
+        "indices": 14,
+        "material": 2,
+        "mode": 4
+      }]
     },
     {
-      "primitives": [
-        {
-          "attributes": {
-            "NORMAL": 16,
-            "POSITION": 15,
-            "TANGENT": 17,
-            "TEXCOORD_0": 18
-          },
-          "indices": 19,
-          "material": 3,
-          "mode": 4
-        }
-      ]
+      "primitives": [{
+        "attributes": {
+          "NORMAL": 16,
+          "POSITION": 15,
+          "TANGENT": 17,
+          "TEXCOORD_0": 18
+        },
+        "indices": 19,
+        "material": 3,
+        "mode": 4
+      }]
     }
   ],
-  "nodes": [
-    {
+  "nodes": [{
       "children": [
         1
       ],
@@ -587,25 +571,20 @@
       "name": ""
     }
   ],
-  "samplers": [
-    {
-      "magFilter": 9729,
-      "minFilter": 9987,
-      "wrapS": 10497,
-      "wrapT": 10497
-    }
-  ],
+  "samplers": [{
+    "magFilter": 9729,
+    "minFilter": 9987,
+    "wrapS": 10497,
+    "wrapT": 10497
+  }],
   "scene": 0,
-  "scenes": [
-    {
-      "name": "OSG_Scene",
-      "nodes": [
-        0
-      ]
-    }
-  ],
-  "textures": [
-    {
+  "scenes": [{
+    "name": "OSG_Scene",
+    "nodes": [
+      0
+    ]
+  }],
+  "textures": [{
       "sampler": 0,
       "source": 0
     },
@@ -627,4 +606,3 @@
     }
   ]
 }
-
