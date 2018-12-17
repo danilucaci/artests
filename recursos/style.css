@@ -60,14 +60,31 @@ h2 {
   flex: 1 0 60%;
 }
 
+.header__qr {
+  flex: 1 0 40%;
+}
+
 .qr__link {
   display: block;
   max-width: 260px;
   object-fit: contain;
-  flex: 1 0 40%;
+  flex: 1 0 30%;
+  margin-bottom: 16px;
+}
+
+.burger__marker {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 40em) {
+
+  .burger__marker-title {
+    max-width: 60%;
+  }
+
   .header {
     flex-direction: row;
   }
