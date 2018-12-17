@@ -14,11 +14,11 @@
 <body>
   <a-scene embedded arjs>
     <a-assets>
-      <a-asset-item id="pizza_gltf" src="pizza_gltf/scene.gltf"></a-asset-item>
+      <img id="burger_2" src="burger_2.jpg" />
     </a-assets>
 
     <a-marker preset='hiro'>
-      <a-gltf-model src="#pizza_gltf  " scale="0.2 0.2 0.2" rotation="0 45 0" animation-mixer></a-gltf-model>
+      <a-plane src="#burger_2" position='0 0 0' width="3" height="3" rotation="-90 0 0" />
     </a-marker>
 
     <a-entity camera></a-entity>
